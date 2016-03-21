@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Reader</title>
+    <script src="../node_modules/node-webkit-winstate/index.js"></script>
+    <link rel="stylesheet" href="../node_modules/purecss/build/pure-min.css">
+    <link rel="stylesheet" href="css/style.css">
+<body>
+
+<div id="layout" class="content pure-g">
+    <div id="content-list" class="pure-u-1-4">
+        <input class="content-list-filter-input" v-show="isSearchMode" transition="fade" v-model="searchWord"/>
+
+        <div class="event-item pure-g" v-for="item in displayItems"
+             v-bind:class='{
+                    "event-item-selected": item === selectedItem
+                 }'>
+            <div class="pure-u" v-on:click="loadHTMLView(item)">
+                <div class="event-header">
+                    <img v-bind:src="item.avatar_url" class="avatar-img"/>
+
+                    <p style="font-size: .6em; margin: 0;">{{item.date}}</p>
+                    <h5 class="event-username">{{item.user_name}}</h5>
+                    <h4 class="event-subject">{{item.title}}</h4>
+                </div>
+                <p class="event-description">
+                    {{item.body}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="github-webview" class="pure-u-1">
+        <div id="comment-preview-header">
+            <p jjclass="repo_name"><a href="https://github.com/{{repo_name}}">{{repo_name}}</a></p>
+
+            <div class="comment-preview-body">
+                <img v-bind:src="avatar_url" class="avatar-img"/>
+
+                <p class="comment-description">
+                    {{body | removeMd}}
+                </p>
+            </div>
+        </div>
+        <iframe id="github-iframe" nwfaketop></iframe>
+    </div>
+</div>
+<script src="node-webkit/workaround.js"></script>
+<script src="menu/menu.js"></script>
+<script>
+    (function () {
+        var gui = require('nw.gui');
+        var win = gui.Window.get();
+        var Mousetrap = require("mousetrap");
+        Mousetrap.bind('command+r', function () {
+            win.reload(true);
+        });
+        win.on('new-win-policy', function (frame, url, policy) {
+            gui.Shell.openExternal(url);
+            policy.ignore();
+        });
+
+        require("./js/index")(gui);
+    })();
+</script>
+</body>
+</html>

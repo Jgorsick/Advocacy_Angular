@@ -1,0 +1,135 @@
+html{
+position: relative;
+min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+    padding: 25px;
+}
+
+footer {
+    background-color: rgb(47, 20, 189);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+    overflow:hidden;
+}
+
+#bg{
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.email{
+margin-top: 7em;
+
+}
+
+
+.navbar{
+	height: 3em;
+	width: 100%;
+	margin: 0 auto;
+	background-color: rgb(47, 20, 189);}
+
+
+.btn{
+border-color:silver;
+border-radius: 15px;
+border-style: outset;
+border-width: medium;
+margin: .5em .2em 0 .2em ;
+background-color: rgb(47, 20, 189);
+width: auto;
+font-size: .9em;
+display: inline-block;
+width: auto;
+text-align: center;
+font-family: inherit;
+font-weight: bold;
+color:white;
+float: left;
+
+}
+
+.snapshot{
+padding-top: 4.2em;
+width: 100%;}
+
+label{
+padding-top: .75em;
+}
+
+
+/*--------@media--400----------------*/
+@media (min-width: 400px) {
+
+	.navbar{
+	height: 4em;}
+
+	.btn{
+	margin: .5em .2em 0 .2em ;
+	font-size: 1.1em;
+	}
+
+	.snapshot{
+	padding-top: 5.7em;}
+
+
+/*--------@media--600----------------*/
+@media (min-width: 600px) {
+
+	.navbar{
+	height: 5em;}
+
+	.btn{
+	margin: .3em 1em;
+	font-size: 1.8em;
+	}
+
+	.snapshot{
+	padding-top: 5.7em;}
+
+
+/*--------@media--800----------------*/
+@media (min-width: 800px) {
+
+	.btn{
+	margin: .4em 1.8em;
+	font-size: 2em;
+	}
+
+	.snapshot{
+	padding-top: 5.7em;}
+
+.navbar{
+height: 5.6em;}
+
+/*--------@media--1000----------------*/
+@media (min-width: 1000px)
+{
+.snapshot{
+padding-top: 6.7em;}
+
+.navbar{
+height: 6.6em;}
+
+.btn{
+margin: .3em 2em;
+font-size: 2.5em;
+}
+/*--------@media--1200----------------*/
+@media (min-width: 1200px)
+{
+.snapshot{
+padding-top: 6.7em;}
+
+.navbar{
+height: 6.6em;}
+
+.btn{
+margin: .3em 2.5em;
+font-size: 2.7em;
+}
