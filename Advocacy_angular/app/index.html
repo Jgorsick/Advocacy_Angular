@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+
 <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
@@ -11,37 +8,30 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
-  <link rel="stylesheet" href="normalize.css/normalize.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css.map">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="app.css">
-
-  <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
 </head>
 <body>
+  <div id="fb-root"></div>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <header class="navbar navbar-default navbar-fixed-top navbar-inner">
-    <!--<div ng-controller="ButtonsCtrl">-->
-
     <a class="btn btn-primary" href="#/view1">Educate</a>
     <a class="btn btn-primary" href="#/view2">Advocate</a>
     <a class="btn btn-primary" href="#/view3">Legislate</a>
-</header>
-
-
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
-  <div class= snapshot ng-view></div>
-
-
-  <footer><div ><a href="mailto:jgorsick@gmail.com">Email</a></div></footer>
-
+  </header>
+  <div  ng-view></div>
+  <a  class="email" href="mailto:1ChildAdvocate@outlook.com">E-mail</a>
+  <div class="fb-like" data-href="http://kydistrict13pta.weebly.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
-
-  <!--<script src="bower_components/angular/angular.js"></script>-->
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>

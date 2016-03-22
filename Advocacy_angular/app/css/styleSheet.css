@@ -4,9 +4,8 @@ min-height: 100%;
 }
 
 body {
-    margin: 0 0 100px; /* bottom = footer height */
-    padding: 25px;
-}
+    margin: 0; /* bottom = footer height */
+    }
 
 footer {
     background-color: rgb(47, 20, 189);
@@ -17,14 +16,29 @@ footer {
     width: 100%;
     overflow:hidden;
 }
-
-#bg{
-	background-size: cover;
-	background-repeat: no-repeat;
+.ng-scope{
+  margin: 10% 0 2px 1%;
+  position:absolute center;
 }
-.email{
-margin-top: 7em;
-
+.fb-like{
+  margin:5px 0 0 0;
+	float:left;
+  max-width: 200px;
+}
+.email {
+  padding: 2.5px 5px 1.5px 5px;
+  border-radius: 1px;
+  margin: 5px 4px 0 2% ;
+  background-color: rgb(72, 100, 180);
+  width: auto;
+  font-size: 11px;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  font-family: helvetica,arial,sans-serif;
+  font-weight: bold;
+  color:white;
+  float: left;
 }
 
 
@@ -54,9 +68,7 @@ float: left;
 
 }
 
-.snapshot{
-padding-top: 4.2em;
-width: 100%;}
+
 
 label{
 padding-top: .75em;
@@ -74,8 +86,10 @@ padding-top: .75em;
 	font-size: 1.1em;
 	}
 
-	.snapshot{
-	padding-top: 5.7em;}
+  .ng-scope{
+    margin: 7% 0 2px 1%;
+    position:absolute center;
+  }
 
 
 /*--------@media--600----------------*/
@@ -89,11 +103,13 @@ padding-top: .75em;
 	font-size: 1.8em;
 	}
 
-	.snapshot{
-	padding-top: 5.7em;}
-
+  .ng-scope{
+    margin: 6% 0 2px 1%;
+    position:absolute center;
+  }
 
 /*--------@media--800----------------*/
+
 @media (min-width: 800px) {
 
 	.btn{
@@ -101,8 +117,8 @@ padding-top: .75em;
 	font-size: 2em;
 	}
 
-	.snapshot{
-	padding-top: 5.7em;}
+  .ng-scope{
+    margin: 5.5% 0 2px 1%;}
 
 .navbar{
 height: 5.6em;}
@@ -110,8 +126,8 @@ height: 5.6em;}
 /*--------@media--1000----------------*/
 @media (min-width: 1000px)
 {
-.snapshot{
-padding-top: 6.7em;}
+  .ng-scope{
+    margin:  5.25% 0 2px 1%;}
 
 .navbar{
 height: 6.6em;}
@@ -123,11 +139,13 @@ font-size: 2.5em;
 /*--------@media--1200----------------*/
 @media (min-width: 1200px)
 {
-.snapshot{
-padding-top: 6.7em;}
-
 .navbar{
-height: 6.6em;}
+height: 6.8em;}
+
+.ng-scope{
+  margin: 4% 0 2px 1%;
+  position:absolute center;
+}
 
 .btn{
 margin: .3em 2.5em;
