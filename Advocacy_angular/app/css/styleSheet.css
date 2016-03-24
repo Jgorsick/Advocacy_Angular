@@ -16,9 +16,14 @@ footer {
     width: 100%;
     overflow:hidden;
 }
+.rssDiv{
+  margin: 10% 0 2px 1%;
+
+
+}
 .ng-scope{
   margin: 10% 0 2px 1%;
-  position:absolute center;
+
 }
 .fb-like{
   margin:5px 0 0 0;
@@ -46,7 +51,7 @@ footer {
 	height: 3em;
 	width: 100%;
 	margin: 0 auto;
-	background-color: rgb(47, 20, 189);}
+	background-color: #00446a;}
 
 
 .btn{
