@@ -1,0 +1,146 @@
+html {
+  height: 100%;
+}
+
+body {
+  color: #555;
+  font-family: Helvetica, Calibri, Arial, sans-serif;
+  height: 100%;
+  font-size: 13px;
+  line-height: 18px;
+}
+.btn{
+border-color:silver;
+border-radius: 15px;
+border-style: outset;
+border-width: medium;
+margin: .5em .2em 0 .2em ;
+background-color: rgb(47, 20, 189);
+width: auto;
+font-size: .9em;
+display: inline-block;
+width: auto;
+text-align: center;
+font-family: inherit;
+font-weight: bold;
+color:white;
+float: left;
+
+
+}
+
+.container {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0 auto;
+  width: 960px;
+}
+
+header {
+  background: #00446a;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  clear: both;
+}
+
+header h1 {
+  font-size: 24px;
+  line-height: 32px;
+  clear: both;
+}
+
+header h2 {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'jubilat', Georgia, serif;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+#main {
+  background: #eee;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -56px;
+  min-height: 100%;
+}
+
+#controls {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 10px;
+}
+
+#results {
+  color: #333;
+  float: right;
+  font-weight: bold;
+}
+
+#no-results {
+  padding: 10px;
+}
+
+#pagination {
+  text-align: right;
+}
+
+#pagination a {
+  color: #00446a;
+  text-decoration: none;
+}
+
+#politicians {
+  padding: 10px;
+}
+
+.politician {
+  background: #fff;
+  float: left;
+  height: 280px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 200px;
+}
+
+.politician:nth-child(4n) {
+  margin-right: 0;
+}
+
+.politician img {
+  background: #fff;
+  height: 250px;
+  width: 200px;
+}
+
+.politician figcaption {
+  text-align: center;
+}
+
+#footer-push {
+  height: 56px;
+}
+
+footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin-top: -56px;
+  padding: 20px;
+  text-align: right;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak, .init {
+  display: none !important;
+}

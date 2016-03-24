@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<title>Joe Gorsick | Child Advocate</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css.map">
+<link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/stylesheet.css">
+<link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<header class="navbar navbar-default navbar-fixed-top navbar-inner">
+  <a class="btn btn-primary" href="../index.html#/view1">Educate</a>
+  <a class="btn btn-primary" href="PrichardFeed.html">Advocate</a>
+  <a class="btn btn-primary" href="../index.html#/view3">Legislate</a>
+</header>
+
+<style>
+    body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;background-color: #efefef;font-size: 13px;line-height: 17px !important;}
+    .rssDiv{float: left;padding-right: 35px; position:absolute;}
+    ul{width: 300px !important;}
+</style>
+</head>
+<body>
+  <div style="padding: 10px;">
+
+
+
+      <div type= "container-fluid" class="rssDiv">
+      <h1>Prichard Committee</h1>
+          <div id="divRss13"></div>
+        </div>
+      <div style="clear: both"></div>
+  </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="js/FeedEk.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#divRss13').FeedEk({
+            FeedUrl: 'http://prichardcommittee.org/rss',
+            MaxCount: 2,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DateFormat: 'LLL',
+            DateFormatLang: 'en'
+        });
+
+
+    });
+
+</script>
+</body>
+
+</html>
+
+<!--
+$('#divRss14').FeedEk({
+    FeedUrl: 'http://prichardcommittee.org/rss',
+    MaxCount: 2,
+    DateFormat: 'MM-DD-YYYY'
+});
+
+$('#divRss15').FeedEk({
+    FeedUrl: 'http://prichardcommittee.org/rss',
+    MaxCount: 2,
+    DateFormat: 'MM-DD-YYYY HH:mm'
+});
+http://feeds.feedburner.com/ThePrichardBlog?format=rss
+http://prichardcommittee.org/rss

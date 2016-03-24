@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" ng-app="politicians">
+  <head>
+    <meta charset="utf-8">
+    <title>Joe Gorsick | Child Advocate</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css.map">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css/reset.css">
+    <link rel="stylesheet" href="css/css/app.css">
+
+  </head>
+
+  <body>
+
+
+    <div id="main">
+
+      <header>
+        <hgroup class="container">
+
+            <a class="btn btn-primary" href="../index.html#/view1">Educate</a>
+            <a class="btn btn-primary" href="PrichardFeed.html">Advocate</a>
+            <a class="btn btn-primary" href="../index.html#/view3">Legislate</a>
+            
+          <h1>United States Congress</h1>
+          <h2>Browse representatives</h2>
+        </hgroup>
+      </header>
+
+      <article ng-controller="DashboardCtrl" ng-init="getPoliticians()" class="container" ng-cloak>
+
+        <div id="controls">
+          <div id="results" ng-hide="totalCount == 0">
+            Showing {{rangeBottom}} - {{rangeTop}} of {{totalCount}}
+          </div>
+
+          <select ng-model="criteria.party" ng-options="party for party in parties"></select>
+          <select ng-model="criteria.state" ng-options="state for state in states"></select>
+          <select ng-model="criteria.chamber" ng-options="chamber for chamber in chambers"></select>
+
+          <div id="pagination" ng-hide="totalPages == 1">
+            <a href="" ng-click="criteria.page=criteria.page-1" ng-hide="criteria.page == 1">&laquo; previous</a>
+            {{criteria.page}} / {{totalPages}}
+            <a href="" ng-click="criteria.page=criteria.page+1" ng-hide="criteria.page == totalPages">next &raquo;</a>
+          </div>
+        </div>
+
+        <div id="no-results" ng-hide="politicians.length">
+          <p>There are no [{{criteria.party}}] {{criteria.chamber}} representatives for {{criteria.state}}.</p>
+        </div>
+
+        <section id="politicians" class="clearfix">
+          <figure ng-repeat="politician in politicians" class="politician">
+            <img ng-src="{{politician.image_path}}" onerror="imgError(this);">
+            <figcaption>
+              {{politician.first_name}} {{politician.last_name}} [{{politician.party}}] - {{politician.state_name}}
+            </figcaption>
+          </figure>
+        </section>
+
+      </article>
+
+      <div id="footer-push"></div>
+
+    </div>
+
+    <footer>
+      <div class="container">
+        Powered by Angular.js and the Sunlight Foundation API
+      </div>
+    </footer>
+
+    <script>
+      function imgError(image) {
+          image.onerror = "";
+          image.attribute
+          image.src = "images/placeholder.gif";
+          return true;
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="js/js/app.js"></script>
+    <!--<script src="js/js/services.js"></script>-->
+    <script src="js/js/controllers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"></script>
+
+  </body>
+</html>
